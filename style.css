@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+   text-decoration: none
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+
+
+.logo img {
+    max-width: 140px;
+    height: auto;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a {
+   padding: 10px 20px;
+   color: #292929;
+   text-transform: capitalize;
+   font-weight: 600;
+   transition: all .42s ease;
+}
+
+.navmenu a:hover {
+    color: #CC3333;
+}
+
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-icon .btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #CC3333;
+    padding: 10px 28px;
+    background-color: #CC3333;
+    color: #fff;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    margin-right: 17px;
+    transition: all .42s ease;
+}
+
+.nav-icon .btn:hover {
+    transform: scale(1.1);
+}
+
+
+#menu-icon {
+    font-size: 35px;
+    color: #292929;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+section {
+    padding: 60px 12%;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(img/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+.home-img img {
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.home-text h4 {
+    color: #CC3333;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-family: cursive;
+}
+
+.home-text h1 {
+    font-size: 40px;
+    color: #292929;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 23px 0;
+}
+
+.home-text h1 span {
+    color: #CC3333;
+}
+
+
+.home-text p {
+    color: #666;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.home-text .btn1 {
+    display: inline-block;
+    color: #fff;
+    background-color: #CC3333;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 15px;
+    transition: all .42s ease;
+
+}
+
+.home-text .btn1:hover {
+    background-color: #292929;
+}
+
+.btn2 {
+    font-size: 15px;
+    color: #292929;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.btn2 span i {
+    width: 50px;
+    height: 50px;
+    background: #CC3333;
+    color: #fff;
+    font-size: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 11px;
+    transition: all .42s ease;
+}
+
+.btn2 span i:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1282px) {
+    header {
+        padding: 20px 3%;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    header.sticky {
+        background: #fff;
+        padding: 20px 3%;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        transition: .4s ease;
+    }
+
+    .home-text {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    section {
+        padding: 90px 3%;
+    }
+
+    .home-img img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 802px) {
+   #menu-icon {
+       display: block;
+   }
+
+   .navmenu {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 300px;
+      height: 400px;
+      background-color: #CC3333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 90px 30px;
+      transition: all .42s ease;
+   }
+
+   .navmenu a {
+      display: block;
+      margin: 5px 5px;
+      transition: all .42s ease;
+   }
+
+   .navmenu a:hover {
+    color: #fff;
+    transform: translateX(-5px);
+   }
+
+   .navmenu.open {
+     right: 0;
+   }
+}
